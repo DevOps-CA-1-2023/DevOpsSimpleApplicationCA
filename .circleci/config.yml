@@ -42,5 +42,5 @@ jobs:
       - image: circleci/node:latest
     steps:
       - run:
-          name: deploy-SimpleApplicationCA
+          name: deploy-application
           command: ssh -o StrictHostKeyChecking=no $EC2_DEVOPS_CA@$EC2_PUBLIC_DNS "rm -rf SimpleApplicationCA/;git clone https://github.com/DevOps-CA-1-2023/DevOpsSimpleApplicationCA.git; source SimpleApplicationCA/deploy.sh"
